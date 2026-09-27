@@ -1,0 +1,6 @@
+{
+  "name": "両国・浅草 下町めぐり デジタル御朱印ラリー",
+  "description": "粋な下町の歴史と現代が交差する両国・浅草・スカイツリーの全6箇所をめぐるデジタル御朱印スタンプラリー。GPS判定、AIカメラ、クイズで巡拝し限定特典を獲得。",
+  "requestFramePermissions": ["camera", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

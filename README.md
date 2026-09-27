@@ -1,11 +1,69 @@
-<div align="center">
+# 両国・浅草 下町めぐり デジタル御朱印ラリー (EDO-TOKYO RALLY)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+江戸・東京の下町文化（両国・浅草・押上スカイツリー）の歴史と現代を結ぶ、完全登録不要のデジタル御朱印スタンプラリーWebアプリケーションです。
 
-  <h1>Built with AI Studio</h2>
+---
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## 🚀 GitHubへのアップロード＆デプロイ手順
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+このリポジトリは、GitHubにプッシュするだけで**GitHub Pages**に自動デプロイされるよう設定済みです（`.github/workflows/deploy.yml`および相対パスベース `base: './'` に対応済み）。
 
-</div>
+### 手順 1: GitHubにリポジトリを作成してコードをプッシュ
+
+```bash
+# 1. ローカルでGit初期化（まだの場合）
+git init
+git add .
+git commit -m "feat: 初回デプロイ準備完了"
+
+# 2. メインブランチに設定
+git branch -M main
+
+# 3. ご自身のGitHubリポジトリURLをリモートに追加
+git remote add origin https://github.com/<あなたのユーザー名>/<リポジトリ名>.git
+
+# 4. プッシュ
+git push -u origin main
+```
+
+### 手順 2: GitHub Pages の設定（1クリック）
+
+1. GitHubのリポジトリページを開きます。
+2. 上部メニューの **[Settings]**（設定）をクリックします。
+3. 左サイドバーの **[Pages]** をクリックします。
+4. **Build and deployment** > **Source** で **「GitHub Actions」** を選択します。
+5. 以上で設定完了です！プッシュをトリガーとして自動ビルドが実行され、数分で `https://<あなたのユーザー名>/<リポジトリ名>/` に公開されます。
+
+---
+
+## 💻 ローカル環境での起動・ビルド
+
+```bash
+# 依存パッケージのインストール
+npm install
+
+# 開発サーバーの起動 (ポート 3000)
+npm run dev
+
+# プロダクションビルドの実行 (/dist に出力)
+npm run build
+
+# ビルド成果物のローカルプレビュー
+npm run preview
+```
+
+---
+
+## 📱 主な機能
+
+- **出立・利用規約画面**: 大円形「どすこい！ラリー開始」ボタン、Web Audio APIによる本格和太鼓音響・音声合成。
+- **ラリーマップ (GISベクター地図)**: 隅田川・北十間川・名所6拠点のリアルタイムレーダーと進捗バー。
+- **6大名所チェックイン**:
+  1. **S002 両国国技館**: GPS接近判定、伝統相撲朱印。
+  2. **S003 unifast co.,ltd**: 浅草橋ものづくり精神、菱形工芸印、店頭限定ステッカー特典。
+  3. **S004 浅草寺 雷門**: AIカメラポーズ判定（大提灯＋✌️ピースサイン）、金龍山本木版朱印画像。
+  4. **S005 仲見世商店街**: GPS判定＋江戸文字AR看板タップ認証、正角印。
+  5. **S007 東京スカイツリー**: 634m武蔵歴史クイズ、展望印。
+  6. **S008 すみだ水族館**: 館内ビーコン連動、水景金魚・海獣朱印。
+- **六景御朱印帖**: エリア別絞り込み（両国・浅草・押上）、印影拡大鑑賞＆押印音再生。
+- **特典・ゴール**: 完走記念シリアル番号、暗号化改ざん防止シールド、スタッフ認証4桁テンキー（`7741`）。
